@@ -30,6 +30,13 @@ namespace DotNetReportsEngine.ReadmeGeneration
             return generator;
         }
 
+
+        public static ReadmeGenerator RenderAllAssembliesToText
+            (this ReadmeGenerator generator)
+        {
+            generator.GenerateCodeForTypes();
+            return generator;
+        }
         public static ReadmeGenerator ExceptType<T>
             (this ReadmeGenerator generator) where T : class
         {
@@ -134,6 +141,9 @@ namespace DotNetReportsEngine.ReadmeGeneration
             Author author)
         {
             generator.Resource.Authors.Add(author);
+            generator.GenerateCodeForAuthor(
+                author.Name,
+                author.Link);
             return generator;
         }
 
@@ -147,8 +157,11 @@ namespace DotNetReportsEngine.ReadmeGeneration
                      .Add(new Author()
                      {
                          Name = name,
-                         link = link
+                         Link = link
                      });
+            generator.GenerateCodeForAuthor(
+                      name,
+                      link);
 
             return generator;
         }
@@ -158,6 +171,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
              IEnumerable<Author> authors)
         {
             generator.Resource.Authors.AddRange(authors);
+            generator.GenerateCodeForAuthors(authors);
             return generator;
         }
 
@@ -167,6 +181,51 @@ namespace DotNetReportsEngine.ReadmeGeneration
         {
             generator.Resource
                      .ContributingDescription = contributingDescription;
+            generator.GenerateCodeForContributingDescription(contributingDescription);
+            return generator;
+        }
+
+        public static ReadmeGenerator AddColor
+            (this ReadmeGenerator generator,
+             string colorTitle,
+             string hex)
+        {
+            generator.Resource
+                     .Colors
+                     .Add(new ColorReference()
+                     {
+                         ColorTitle = colorTitle,
+                         Hex = hex
+                     });
+            generator.GenerateCodeForColor(
+                      colorTitle,
+                      hex);
+
+            return generator;
+        }
+        public static ReadmeGenerator AddCcolor
+            (this ReadmeGenerator generator,
+             ColorReference colorReference)
+        {
+            generator.Resource
+                     .Colors
+                     .Add(colorReference);
+            generator.GenerateCodeForColor(
+                                  colorReference.ColorTitle,
+                                  colorReference.Hex);
+
+            return generator;
+        }
+        public static ReadmeGenerator AddColors
+           (this ReadmeGenerator generator,
+            IEnumerable<ColorReference> colors)
+        {
+            generator.Resource
+                     .Colors
+                     .AddRange(colors);
+
+            generator.GenerateCodeForColors(colors);
+
             return generator;
         }
 
@@ -183,6 +242,8 @@ namespace DotNetReportsEngine.ReadmeGeneration
              IEnumerable<string> links)
         {
             generator.Resource.Demo.AddRange(links);
+            generator.GenerateCodeForDemoLinks(links);
+
             return generator;
         }
 
@@ -198,6 +259,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
                          Description = description,
                          Bashes = bashCommand.ToList()
                      });
+            generator.GenerateCodeForDeploymentDetail(description, bashCommand);
             return generator;
         }
         public static ReadmeGenerator AddDeploymentDetails
@@ -207,6 +269,8 @@ namespace DotNetReportsEngine.ReadmeGeneration
             generator.Resource
                      .DeploymentDetails
                      .AddRange(deploymentsDetails);
+
+            generator.GenerateCodeForDeploymentDetails(deploymentsDetails);
             return generator;
         }
 
@@ -222,6 +286,21 @@ namespace DotNetReportsEngine.ReadmeGeneration
                          Answer = answer,
                          Question = question
                      });
+
+            generator.GenerateCodeForFAQ(question, answer);
+
+            return generator;
+        }
+        public static ReadmeGenerator AddFAQs
+           (this ReadmeGenerator generator,
+           IEnumerable<FAQ> faqs)
+        {
+            generator.Resource
+                     .FAQ
+                     .AddRange(faqs);
+
+            generator.GenerateCodeForFAQs(faqs);
+
             return generator;
         }
 
@@ -232,6 +311,19 @@ namespace DotNetReportsEngine.ReadmeGeneration
             generator.Resource
                      .Features
                      .Add(feature);
+            generator.GenerateCodeForFeature(feature);
+            return generator;
+        }
+        public static ReadmeGenerator AddFeatures
+           (this ReadmeGenerator generator,
+            params string[] features)
+        {
+            generator.Resource
+                     .Features
+                     .AddRange(features);
+
+            generator.GenerateCodeForFeatures(features);
+
             return generator;
         }
 
@@ -240,6 +332,8 @@ namespace DotNetReportsEngine.ReadmeGeneration
              string feedBackDetail)
         {
             generator.Resource.FeedBackDetail = feedBackDetail;
+
+            generator.GenerateCodeForFeedBackDetail(feedBackDetail);
             return generator;
         }
 
@@ -248,6 +342,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
              string gitHub_AboutMe)
         {
             generator.Resource.GitHub_AboutMe = gitHub_AboutMe;
+            generator.GenerateCodeForGitHub_AboutMe(gitHub_AboutMe);
             return generator;
         }
 
@@ -256,6 +351,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
              string gitHub_Introduction)
         {
             generator.Resource.GitHub_Introduction = gitHub_Introduction;
+            generator.GenerateCodeForGitHub_Introduction(gitHub_Introduction);
             return generator;
         }
 
@@ -264,6 +360,28 @@ namespace DotNetReportsEngine.ReadmeGeneration
             GitHubLink gitHub_links)
         {
             generator.Resource.GitHub_Links.Add(gitHub_links);
+            generator.GenerateCodeForGitHub_Link(gitHub_links);
+
+            return generator;
+        }
+
+        public static ReadmeGenerator AddGitHub_Link
+           (this ReadmeGenerator generator,
+            string title,
+            string link,
+            LogoLinkType logoLinkType,
+            string logoLink)
+        {
+            generator.Resource.GitHub_Links.Add(new GitHubLink()
+            {
+                Link = link,
+                Title = title,
+                LogoLink = logoLink,
+                LogoType = logoLinkType
+            });
+
+            generator.GenerateCodeForGitHub_Link(title, link, logoLinkType, logoLink);
+
             return generator;
         }
 
@@ -275,8 +393,9 @@ namespace DotNetReportsEngine.ReadmeGeneration
             generator.Resource.GitHub_Links.Add(new GitHubLink()
             {
                 Link = link,
-                Title = title,
+                Title = title
             });
+            generator.GenerateCodeForGitHub_Link(title, link);
             return generator;
         }
 
@@ -285,6 +404,8 @@ namespace DotNetReportsEngine.ReadmeGeneration
             IEnumerable<GitHubLink> links)
         {
             generator.Resource.GitHub_Links.AddRange(links);
+            generator.GenerateCodeForGitHub_Link(links);
+
             return generator;
         }
 
@@ -293,6 +414,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
             License license)
         {
             generator.Resource.License = license;
+            generator.GenerateCodeForLicense(license);
             return generator;
         }
         public static ReadmeGenerator SetLicense
@@ -304,6 +426,11 @@ namespace DotNetReportsEngine.ReadmeGeneration
                 Title = title,
                 LicenseLink = link
             };
+            generator.GenerateCodeForLicense(new License()
+            {
+                Title = title,
+                LicenseLink = link
+            });
             return generator;
         }
 
@@ -312,6 +439,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
             Logo logo)
         {
             generator.Resource.Logo = logo;
+            generator.GenerateCodeForLogo(logo);
             return generator;
         }
 
@@ -324,6 +452,11 @@ namespace DotNetReportsEngine.ReadmeGeneration
                 Title = title,
                 LogoLink = link
             };
+            generator.GenerateCodeForLogo(new Logo()
+            {
+                Title = title,
+                LogoLink = link
+            });
             return generator;
         }
 
@@ -337,6 +470,11 @@ namespace DotNetReportsEngine.ReadmeGeneration
                 Title = title,
                 ProjectLink = link
             });
+            generator.GenerateCodeForRelatedProject(new RelatedProject()
+            {
+                Title = title,
+                ProjectLink = link
+            });
             return generator;
         }
 
@@ -345,13 +483,16 @@ namespace DotNetReportsEngine.ReadmeGeneration
            RelatedProject relatedProject)
         {
             generator.Resource.RelatedProjects.Add(relatedProject);
+            generator.GenerateCodeForRelatedProject(relatedProject);
             return generator;
         }
+
         public static ReadmeGenerator AddRelatedProjects
           (this ReadmeGenerator generator,
            IEnumerable<RelatedProject> relatedProjects)
         {
             generator.Resource.RelatedProjects.AddRange(relatedProjects);
+            generator.GenerateCodeForRelatedProjects(relatedProjects);
             return generator;
         }
 
@@ -367,6 +508,12 @@ namespace DotNetReportsEngine.ReadmeGeneration
                          Title = title,
                          BashCommands = bashCommands.ToList()
                      });
+            generator.GenerateCodeForCustomBashCommand(
+                new CustomBashCommand()
+                {
+                    Title = title,
+                    BashCommands = bashCommands.ToList()
+                });
             return generator;
         }
 
@@ -375,6 +522,8 @@ namespace DotNetReportsEngine.ReadmeGeneration
            CustomBashCommand bashcommand)
         {
             generator.Resource.CustomBashCommands.Add(bashcommand);
+            generator.GenerateCodeForCustomBashCommand(bashcommand);
+
             return generator;
         }
         public static ReadmeGenerator AddCustomBashCommand
@@ -382,6 +531,8 @@ namespace DotNetReportsEngine.ReadmeGeneration
            IEnumerable<CustomBashCommand> bashCommands)
         {
             generator.Resource.CustomBashCommands.AddRange(bashCommands);
+            generator.GenerateCodeForCustomBashCommands(bashCommands);
+
             return generator;
         }
 
@@ -397,6 +548,11 @@ namespace DotNetReportsEngine.ReadmeGeneration
                          Title = title,
                          Description = description
                      });
+            generator.GenerateCodeForCustomText(new CustomText()
+            {
+                Title = title,
+                Description = description
+            });
             return generator;
         }
 
@@ -405,6 +561,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
            CustomText customText)
         {
             generator.Resource.CustomTexts.Add(customText);
+            generator.GenerateCodeForCustomText(customText);
             return generator;
         }
         public static ReadmeGenerator AddCustomTexts
@@ -413,6 +570,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
         {
             generator.Resource.CustomTexts
                 .AddRange(customTexts);
+            generator.GenerateCodeForCustomTexts(customTexts);
             return generator;
         }
 
@@ -430,6 +588,12 @@ namespace DotNetReportsEngine.ReadmeGeneration
                          BadgeLink = badgeLink,
                          RedirectLink = redirectLink
                      });
+            generator.GenerateCodeForBadge(new Badge()
+            {
+                Title = title,
+                BadgeLink = badgeLink,
+                RedirectLink = redirectLink
+            });
             return generator;
         }
 
@@ -438,14 +602,15 @@ namespace DotNetReportsEngine.ReadmeGeneration
            Badge badge)
         {
             generator.Resource.Badges.Add(badge);
+            generator.GenerateCodeForBadge(badge);
             return generator;
         }
         public static ReadmeGenerator AddBadges
           (this ReadmeGenerator generator,
            IEnumerable<Badge> badges)
         {
-            generator.Resource.Badges
-                .AddRange(badges);
+            generator.Resource.Badges.AddRange(badges);
+            generator.GenerateCodeForBadges(badges);
             return generator;
         }
 

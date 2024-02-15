@@ -15,6 +15,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
             Acknowledgements = new List<Acknowledgement>();
             Appendix = new List<Appendix>();
             Authors = new List<Author>();
+            Colors = new List<ColorReference>();
             Demo = new List<string>();
             DeploymentDetails = new List<Deployment>();
             Documentations = new List<Documentation>();
@@ -28,13 +29,21 @@ namespace DotNetReportsEngine.ReadmeGeneration
         }
 
         public List<Assembly> Assemblies { get; internal set; }
-        public List<Type> Types => Assemblies.SelectMany(_ => _.GetTypes()).ToList();
+        public List<Type> Types =>
+               Assemblies
+               .SelectMany(_ =>
+                   _.GetTypes()
+                    .Where(_ => _.IsClass
+                             && _.IsPublic
+                             && _.CustomAttributes.Any(_ => _.AttributeType == typeof(RenderInReadmeFileAttribute))))
+                    .ToList();
         public ProjectDetail ProjectDetail { get; internal set; }
         public List<Acknowledgement> Acknowledgements { get; internal set; }
         public List<Type> Controllers => Types.Where(_ => _.BaseType == typeof(ControllerBase)).ToList();
         public List<Appendix> Appendix { get; internal set; }
         public List<Author> Authors { get; internal set; }
         public string ContributingDescription { get; internal set; }
+        public List<ColorReference> Colors { get; set; }
         public List<string> Demo { get; internal set; }
         public List<Deployment> DeploymentDetails { get; internal set; }
         public List<Documentation> Documentations { get; internal set; }

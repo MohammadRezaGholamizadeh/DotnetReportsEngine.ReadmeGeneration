@@ -2,8 +2,12 @@
 {
     public class ReadmeGenerator
     {
-        internal string Text = string.Empty;
-        internal ReadmeResource Resource => new ReadmeResource();
+        public ReadmeGenerator()
+        {
+            Resource = new ReadmeResource();
+        }
+        public string Text = string.Empty;
+        public ReadmeResource Resource { get; set; }
 
         internal string AppendText(string text)
         {

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace DotNetReportsEngine.ReadmeGeneration.Details
 {
-    public class Author
+    public class ColorReference
     {
-        public string Name { get; set; }
-        public string? Link { get; set; }
+        public string ColorTitle { get; set; }
+        public string Hex { get; set; }
     }
 }
