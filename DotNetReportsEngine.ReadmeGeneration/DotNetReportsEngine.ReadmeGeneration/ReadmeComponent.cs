@@ -775,8 +775,8 @@ namespace DotNetReportsEngine.ReadmeGeneration
 
                 template += Environment.NewLine ;
 
-                generator.AppendText(template);
             }
+                generator.AppendText(template);
 
             return generator;
         }
