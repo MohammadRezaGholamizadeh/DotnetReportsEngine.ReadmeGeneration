@@ -668,7 +668,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
                     {
                         template += $"* Constructor Number {i + 1} : " + Environment.NewLine + Environment.NewLine;
                         template += $@"| Parameter | Type     | Description                |" + Environment.NewLine +
-                            $@"| :-------- | :------- | :------------------------- |" + Environment.NewLine;
+                            $@"| -------- | ------- | ------------------------- |" + Environment.NewLine;
                     }
                     else
                     {
@@ -728,12 +728,12 @@ namespace DotNetReportsEngine.ReadmeGeneration
                         }
                     }
 
-                    template += $"* {method.Name}({methodParameterNames})" + Environment.NewLine;
+                    template += $"* {method.Name}({methodParameterNames})" + Environment.NewLine + Environment.NewLine;
 
                     if (method.GetParameters().Length > 0)
                     {
                         template += $@"| Parameter | Type     | Description                |" + Environment.NewLine +
-                            $@"| :-------- | :------- | :------------------------- |" + Environment.NewLine;
+                            $@"| -------- | ------- | ------------------------- |" + Environment.NewLine;
                     }
                     foreach (var parameter in method.GetParameters())
                     {
@@ -772,7 +772,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
                     }
                 }
 
-                template += Environment.NewLine;
+                template += Environment.NewLine + Environment.NewLine;
 
                 generator.AppendText(template);
             }
