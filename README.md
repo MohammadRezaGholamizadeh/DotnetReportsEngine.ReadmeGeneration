@@ -40,14 +40,18 @@ namespace DotnetReportsEngine.SampleCode
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `assembly` | `Assembly` | ** **Required.**                      |
+| `assembly` | `Assembly` | ** **Required.** The Assembly That You Want To Add All Types In It To ReadMe File Generator.|
+
+This Method Add Assembly That You Want To Add All Types In It To ReadMe File Generator.
 
 * AddAssemblies(generator, assemblies)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `assemblies` | `IEnumerable<Assembly>` | ** **Required.**                      |
+| `assemblies` | `IEnumerable<Assembly>` | ** **Required.** The Assembly That You Want To Add All Types In It To ReadMe File Generator.|
+
+This Method Add Assembly That You Want To Add All Types In It To ReadMe File Generator.
 
 * RenderAllAssembliesToText(generator)
 
@@ -55,18 +59,7 @@ namespace DotnetReportsEngine.SampleCode
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 
-* ExceptType(generator)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-
-* ExceptTypes(generator, types)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `types` | `Type[]` | ** **Required.**                      |
+This Method Generate Text Format For All Assembly That You Want To Add All Types In It To ReadMe File Generator.
 
 * SetProjectDetail(generator, title, description)
 
@@ -76,12 +69,16 @@ namespace DotnetReportsEngine.SampleCode
 | `title` | `String` | ** **Required.**                      |
 | `description` | `String` | ** **Not Required.**                       |
 
+This Method Generate Text Format For Project Detail That You Want To Add It To ReadMe File.
+
 * AddAcknowledgement(generator, acknowledgement)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `acknowledgement` | `Acknowledgement` | ** **Required.**                      |
+
+This Method Generate Text Format For Acknowledgement That You Want To Add It To ReadMe File.
 
 * AddAcknowledgement(generator, title, link)
 
@@ -91,12 +88,16 @@ namespace DotnetReportsEngine.SampleCode
 | `title` | `String` | ** **Required.**                      |
 | `link` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For Acknowledgement That You Want To Add It To ReadMe File.
+
 * AddAcknowledgements(generator, acknowledgements)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `acknowledgements` | `IEnumerable<Acknowledgement>` | ** **Required.**                      |
+
+This Method Generate Text Format For Acknowledgement That You Want To Add It To ReadMe File.
 
 * AddAppendix(generator, appendix)
 
@@ -105,12 +106,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `appendix` | `Appendix` | ** **Required.**                      |
 
+This Method Generate Text Format For Appendix(Additional Information)  That You Want To Add It To ReadMe File.
+
 * AddAppendix(generator, descriptionOrScript)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `descriptionOrScript` | `String` | ** **Required.**                      |
+
+This Method Generate Text Format For Appendix(Additional Information)  That You Want To Add It To ReadMe File.
 
 * AddAppendixes(generator, appendixes)
 
@@ -119,12 +124,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `appendixes` | `IEnumerable<Appendix>` | ** **Required.**                      |
 
+This Method Generate Text Format For Appendix(Additional Information)  That You Want To Add It To ReadMe File.
+
 * AddAuthor(generator, author)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `author` | `Author` | ** **Required.**                      |
+
+This Method Generate Text Format For Author Info That You Want To Add It To ReadMe File.
 
 * AddAuthor(generator, name, link)
 
@@ -134,6 +143,8 @@ namespace DotnetReportsEngine.SampleCode
 | `name` | `String` | ** **Required.**                      |
 | `link` | `String` | ** **Not Required.**                       |
 
+This Method Generate Text Format For Author Info That You Want To Add It To ReadMe File.
+
 * AddAuthors(generator, authors)
 
 | Parameter | Type     | Description                |
@@ -141,12 +152,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `authors` | `IEnumerable<Author>` | ** **Required.**                      |
 
+This Method Generate Text Format For Author Info That You Want To Add It To ReadMe File.
+
 * SetContributingDescription(generator, contributingDescription)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `contributingDescription` | `String` | ** **Required.**                      |
+
+This Method Generate Text Format For Contributing Info That You Want To Add It To ReadMe File.
 
 * AddColor(generator, colorTitle, hex)
 
@@ -156,12 +171,16 @@ namespace DotnetReportsEngine.SampleCode
 | `colorTitle` | `String` | ** **Required.**                      |
 | `hex` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For Color Table That You Want To Add It To ReadMe File.
+
 * AddCcolor(generator, colorReference)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `colorReference` | `ColorReference` | ** **Required.**                      |
+
+This Method Generate Text Format For Color Table That You Want To Add It To ReadMe File.
 
 * AddColors(generator, colors)
 
@@ -170,6 +189,8 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `colors` | `IEnumerable<ColorReference>` | ** **Required.**                      |
 
+This Method Generate Text Format For Color Table That You Want To Add It To ReadMe File.
+
 * AddDemoLink(generator, link)
 
 | Parameter | Type     | Description                |
@@ -177,12 +198,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `link` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For Demo That You Want To Add It To ReadMe File.
+
 * AddDemoLinks(generator, links)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `links` | `IEnumerable<String>` | ** **Required.**                      |
+
+This Method Generate Text Format For Demo That You Want To Add It To ReadMe File.
 
 * AddDeploymentDetail(generator, description, bashCommand)
 
@@ -192,12 +217,16 @@ namespace DotnetReportsEngine.SampleCode
 | `description` | `String` | ** **Required.**                      |
 | `bashCommand` | `String[]` | ** **Required.**                      |
 
+This Method Generate Text Format For Deployment Detail That You Want To Add It To ReadMe File.
+
 * AddDeploymentDetails(generator, deploymentsDetails)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `deploymentsDetails` | `IEnumerable<Deployment>` | ** **Required.**                      |
+
+This Method Generate Text Format For Deployment Detail That You Want To Add It To ReadMe File.
 
 * AddFAQ(generator, question, answer)
 
@@ -207,12 +236,16 @@ namespace DotnetReportsEngine.SampleCode
 | `question` | `String` | ** **Required.**                      |
 | `answer` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For Question and Answer That You Want To Add It To ReadMe File.
+
 * AddFAQs(generator, faqs)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `faqs` | `IEnumerable<FAQ>` | ** **Required.**                      |
+
+This Method Generate Text Format For Question and Answer That You Want To Add It To ReadMe File.
 
 * AddFeature(generator, feature)
 
@@ -221,12 +254,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `feature` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For Feature Detail That You Want To Add It To ReadMe File.
+
 * AddFeatures(generator, features)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `features` | `String[]` | ** **Required.**                      |
+
+This Method Generate Text Format For Feature Detail That You Want To Add It To ReadMe File.
 
 * SetFeedBackDetail(generator, feedBackDetail)
 
@@ -235,12 +272,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `feedBackDetail` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For FeedBack Info That You Want To Add It To ReadMe File.
+
 * SetGitHub_AboutMe(generator, gitHub_AboutMe)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `gitHub_AboutMe` | `String` | ** **Required.**                      |
+
+This Method Generate Text Format For Your Personal Description Abount YourSelf That You Want To Add It To ReadMe File.
 
 * SetGitHub_Introduction(generator, gitHub_Introduction)
 
@@ -249,12 +290,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `gitHub_Introduction` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For Your Personal Description Abount YourSelf That You Want To Add It To ReadMe File.
+
 * AddGitHub_Link(generator, gitHub_links)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `gitHub_links` | `GitHubLink` | ** **Required.**                      |
+
+This Method Generate Text Format For GitHub Link That You Want To Add It To ReadMe File.
 
 * AddGitHub_Link(generator, title, link, logoLinkType, logoLink)
 
@@ -266,6 +311,8 @@ namespace DotnetReportsEngine.SampleCode
 | `logoLinkType` | `LogoLinkType` | ** **Required.**                      |
 | `logoLink` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For GitHub Link That You Want To Add It To ReadMe File.
+
 * AddGitHub_Link(generator, title, link)
 
 | Parameter | Type     | Description                |
@@ -274,6 +321,8 @@ namespace DotnetReportsEngine.SampleCode
 | `title` | `String` | ** **Required.**                      |
 | `link` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For GitHub Link That You Want To Add It To ReadMe File.
+
 * AddGitHub_Links(generator, links)
 
 | Parameter | Type     | Description                |
@@ -281,12 +330,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `links` | `IEnumerable<GitHubLink>` | ** **Required.**                      |
 
+This Method Generate Text Format For GitHub Link That You Want To Add It To ReadMe File.
+
 * SetLicense(generator, license)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `license` | `License` | ** **Required.**                      |
+
+This Method Generate Text Format For License Info That You Want To Add It To ReadMe File.
 
 * SetLicense(generator, title, link)
 
@@ -296,12 +349,16 @@ namespace DotnetReportsEngine.SampleCode
 | `title` | `String` | ** **Required.**                      |
 | `link` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For License Info That You Want To Add It To ReadMe File.
+
 * SetLogo(generator, logo)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `logo` | `Logo` | ** **Required.**                      |
+
+This Method Generate Text Format For Logo That You Want To Add It To ReadMe File.
 
 * SetLogo(generator, title, link)
 
@@ -311,6 +368,8 @@ namespace DotnetReportsEngine.SampleCode
 | `title` | `String` | ** **Required.**                      |
 | `link` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For Logo That You Want To Add It To ReadMe File.
+
 * AddRelatedProject(generator, title, link)
 
 | Parameter | Type     | Description                |
@@ -319,6 +378,8 @@ namespace DotnetReportsEngine.SampleCode
 | `title` | `String` | ** **Required.**                      |
 | `link` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For Related Project Info That You Want To Add It To ReadMe File.
+
 * AddRelatedProject(generator, relatedProject)
 
 | Parameter | Type     | Description                |
@@ -326,12 +387,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `relatedProject` | `RelatedProject` | ** **Required.**                      |
 
+This Method Generate Text Format For Related Project Info That You Want To Add It To ReadMe File.
+
 * AddRelatedProjects(generator, relatedProjects)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `relatedProjects` | `IEnumerable<RelatedProject>` | ** **Required.**                      |
+
+This Method Generate Text Format For Related Project Info That You Want To Add It To ReadMe File.
 
 * AddCustomBashCommand(generator, title, bashCommands)
 
@@ -341,6 +406,8 @@ namespace DotnetReportsEngine.SampleCode
 | `title` | `String` | ** **Required.**                      |
 | `bashCommands` | `String[]` | ** **Required.**                      |
 
+This Method Generate Text Format For Custom Bash Command That You Want To Add It To ReadMe File.
+
 * AddCustomBashCommand(generator, bashcommand)
 
 | Parameter | Type     | Description                |
@@ -348,12 +415,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `bashcommand` | `CustomBashCommand` | ** **Required.**                      |
 
+This Method Generate Text Format For Custom Bash Command That You Want To Add It To ReadMe File.
+
 * AddCustomBashCommand(generator, bashCommands)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `bashCommands` | `IEnumerable<CustomBashCommand>` | ** **Required.**                      |
+
+This Method Generate Text Format For Custom Bash Command That You Want To Add It To ReadMe File.
 
 * AddCustomText(generator, title, description)
 
@@ -363,6 +434,8 @@ namespace DotnetReportsEngine.SampleCode
 | `title` | `String` | ** **Required.**                      |
 | `description` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For Custom Text That You Want To Add It To ReadMe File.
+
 * AddCustomText(generator, customText)
 
 | Parameter | Type     | Description                |
@@ -370,12 +443,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `customText` | `CustomText` | ** **Required.**                      |
 
+This Method Generate Text Format For Custom Text That You Want To Add It To ReadMe File.
+
 * AddCustomTexts(generator, customTexts)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `customTexts` | `IEnumerable<CustomText>` | ** **Required.**                      |
+
+This Method Generate Text Format For Custom Text That You Want To Add It To ReadMe File.
 
 * AddBadge(generator, title, badgeLink, redirectLink)
 
@@ -386,6 +463,8 @@ namespace DotnetReportsEngine.SampleCode
 | `badgeLink` | `String` | ** **Required.**                      |
 | `redirectLink` | `String` | ** **Required.**                      |
 
+This Method Generate Text Format For Custom Badge That You Want To Add It To ReadMe File.
+
 * AddBadge(generator, badge)
 
 | Parameter | Type     | Description                |
@@ -393,12 +472,16 @@ namespace DotnetReportsEngine.SampleCode
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `badge` | `Badge` | ** **Required.**                      |
 
+This Method Generate Text Format For Custom Badge That You Want To Add It To ReadMe File.
+
 * AddBadges(generator, badges)
 
 | Parameter | Type     | Description                |
 | -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 | `badges` | `IEnumerable<Badge>` | ** **Required.**                      |
+
+This Method Generate Text Format For Custom Badge That You Want To Add It To ReadMe File.
 
 * AddCustomCode(generator, language, CodeBody)
 
@@ -408,400 +491,4 @@ namespace DotnetReportsEngine.SampleCode
 | `language` | `String` | ** **Required.**                      |
 | `CodeBody` | `String` | ** **Required.**                      |
 
-
-# Class And Method Implementation
-## Type : DotnetReportResourceExtensionMethods
-### DotnetReportResourceExtensionMethods Methods : 
-
-* AddAssemblyOfType(generator)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-
-* AddAssembly(generator, assembly)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `assembly` | `Assembly` | ** **Required.**                      |
-
-* AddAssemblies(generator, assemblies)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `assemblies` | `IEnumerable<Assembly>` | ** **Required.**                      |
-
-* RenderAllAssembliesToText(generator)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-
-* ExceptType(generator)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-
-* ExceptTypes(generator, types)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `types` | `Type[]` | ** **Required.**                      |
-
-* SetProjectDetail(generator, title, description)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `title` | `String` | ** **Required.**                      |
-| `description` | `String` | ** **Not Required.**                       |
-
-* AddAcknowledgement(generator, acknowledgement)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `acknowledgement` | `Acknowledgement` | ** **Required.**                      |
-
-* AddAcknowledgement(generator, title, link)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `title` | `String` | ** **Required.**                      |
-| `link` | `String` | ** **Required.**                      |
-
-* AddAcknowledgements(generator, acknowledgements)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `acknowledgements` | `IEnumerable<Acknowledgement>` | ** **Required.**                      |
-
-* AddAppendix(generator, appendix)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `appendix` | `Appendix` | ** **Required.**                      |
-
-* AddAppendix(generator, descriptionOrScript)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `descriptionOrScript` | `String` | ** **Required.**                      |
-
-* AddAppendixes(generator, appendixes)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `appendixes` | `IEnumerable<Appendix>` | ** **Required.**                      |
-
-* AddAuthor(generator, author)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `author` | `Author` | ** **Required.**                      |
-
-* AddAuthor(generator, name, link)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `name` | `String` | ** **Required.**                      |
-| `link` | `String` | ** **Not Required.**                       |
-
-* AddAuthors(generator, authors)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `authors` | `IEnumerable<Author>` | ** **Required.**                      |
-
-* SetContributingDescription(generator, contributingDescription)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `contributingDescription` | `String` | ** **Required.**                      |
-
-* AddColor(generator, colorTitle, hex)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `colorTitle` | `String` | ** **Required.**                      |
-| `hex` | `String` | ** **Required.**                      |
-
-* AddCcolor(generator, colorReference)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `colorReference` | `ColorReference` | ** **Required.**                      |
-
-* AddColors(generator, colors)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `colors` | `IEnumerable<ColorReference>` | ** **Required.**                      |
-
-* AddDemoLink(generator, link)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `link` | `String` | ** **Required.**                      |
-
-* AddDemoLinks(generator, links)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `links` | `IEnumerable<String>` | ** **Required.**                      |
-
-* AddDeploymentDetail(generator, description, bashCommand)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `description` | `String` | ** **Required.**                      |
-| `bashCommand` | `String[]` | ** **Required.**                      |
-
-* AddDeploymentDetails(generator, deploymentsDetails)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `deploymentsDetails` | `IEnumerable<Deployment>` | ** **Required.**                      |
-
-* AddFAQ(generator, question, answer)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `question` | `String` | ** **Required.**                      |
-| `answer` | `String` | ** **Required.**                      |
-
-* AddFAQs(generator, faqs)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `faqs` | `IEnumerable<FAQ>` | ** **Required.**                      |
-
-* AddFeature(generator, feature)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `feature` | `String` | ** **Required.**                      |
-
-* AddFeatures(generator, features)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `features` | `String[]` | ** **Required.**                      |
-
-* SetFeedBackDetail(generator, feedBackDetail)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `feedBackDetail` | `String` | ** **Required.**                      |
-
-* SetGitHub_AboutMe(generator, gitHub_AboutMe)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `gitHub_AboutMe` | `String` | ** **Required.**                      |
-
-* SetGitHub_Introduction(generator, gitHub_Introduction)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `gitHub_Introduction` | `String` | ** **Required.**                      |
-
-* AddGitHub_Link(generator, gitHub_links)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `gitHub_links` | `GitHubLink` | ** **Required.**                      |
-
-* AddGitHub_Link(generator, title, link, logoLinkType, logoLink)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `title` | `String` | ** **Required.**                      |
-| `link` | `String` | ** **Required.**                      |
-| `logoLinkType` | `LogoLinkType` | ** **Required.**                      |
-| `logoLink` | `String` | ** **Required.**                      |
-
-* AddGitHub_Link(generator, title, link)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `title` | `String` | ** **Required.**                      |
-| `link` | `String` | ** **Required.**                      |
-
-* AddGitHub_Links(generator, links)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `links` | `IEnumerable<GitHubLink>` | ** **Required.**                      |
-
-* SetLicense(generator, license)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `license` | `License` | ** **Required.**                      |
-
-* SetLicense(generator, title, link)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `title` | `String` | ** **Required.**                      |
-| `link` | `String` | ** **Required.**                      |
-
-* SetLogo(generator, logo)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `logo` | `Logo` | ** **Required.**                      |
-
-* SetLogo(generator, title, link)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `title` | `String` | ** **Required.**                      |
-| `link` | `String` | ** **Required.**                      |
-
-* AddRelatedProject(generator, title, link)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `title` | `String` | ** **Required.**                      |
-| `link` | `String` | ** **Required.**                      |
-
-* AddRelatedProject(generator, relatedProject)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `relatedProject` | `RelatedProject` | ** **Required.**                      |
-
-* AddRelatedProjects(generator, relatedProjects)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `relatedProjects` | `IEnumerable<RelatedProject>` | ** **Required.**                      |
-
-* AddCustomBashCommand(generator, title, bashCommands)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `title` | `String` | ** **Required.**                      |
-| `bashCommands` | `String[]` | ** **Required.**                      |
-
-* AddCustomBashCommand(generator, bashcommand)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `bashcommand` | `CustomBashCommand` | ** **Required.**                      |
-
-* AddCustomBashCommand(generator, bashCommands)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `bashCommands` | `IEnumerable<CustomBashCommand>` | ** **Required.**                      |
-
-* AddCustomText(generator, title, description)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `title` | `String` | ** **Required.**                      |
-| `description` | `String` | ** **Required.**                      |
-
-* AddCustomText(generator, customText)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `customText` | `CustomText` | ** **Required.**                      |
-
-* AddCustomTexts(generator, customTexts)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `customTexts` | `IEnumerable<CustomText>` | ** **Required.**                      |
-
-* AddBadge(generator, title, badgeLink, redirectLink)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `title` | `String` | ** **Required.**                      |
-| `badgeLink` | `String` | ** **Required.**                      |
-| `redirectLink` | `String` | ** **Required.**                      |
-
-* AddBadge(generator, badge)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `badge` | `Badge` | ** **Required.**                      |
-
-* AddBadges(generator, badges)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `badges` | `IEnumerable<Badge>` | ** **Required.**                      |
-
-* AddCustomCode(generator, language, CodeBody)
-
-| Parameter | Type     | Description                |
-| -------- | ------- | ------------------------- |
-| `generator` | `ReadmeGenerator` | ** **Required.**                      |
-| `language` | `String` | ** **Required.**                      |
-| `CodeBody` | `String` | ** **Required.**                      |
-
-
-## Type : ReadmeGenerator
-### This Type Has 1 Custom Constructor : 
-* Constructor Number 1 : [ Void ] 
-### ReadmeGenerator Methods : 
-
-* GetResources()
-
-
-* GetText()
-
-
-
+This Method Generate Text Format For Custom Code That You Want To Add It To ReadMe File.

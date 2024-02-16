@@ -38,20 +38,6 @@ namespace DotNetReportsEngine.ReadmeGeneration
             generator.GenerateCodeForTypes();
             return generator;
         }
-        public static ReadmeGenerator ExceptType<T>
-            (this ReadmeGenerator generator) where T : class
-        {
-            generator.Resource.Types.Remove(typeof(T));
-            return generator;
-        }
-
-        public static ReadmeGenerator ExceptTypes
-            (this ReadmeGenerator generator,
-            params Type[] types)
-        {
-            generator.Resource.Types.RemoveAll(_ => types.Contains(_));
-            return generator;
-        }
 
         public static ReadmeGenerator SetProjectDetail
             (this ReadmeGenerator generator,
