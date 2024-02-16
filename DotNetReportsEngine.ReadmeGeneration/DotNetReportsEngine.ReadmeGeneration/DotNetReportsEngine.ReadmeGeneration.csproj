@@ -12,8 +12,6 @@
     <Description>This Package Developed For Generating The Read me File Automated.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/MohammadRezaGholamizadeh/DotnetReportsEngine.ReadmeGeneration</RepositoryUrl>
-    <PackageLicenseFile>D:\All Projects\DotnetReportsEngine.ReadmeGeneration\DotNetReportsEngine.ReadmeGeneration\DotNetReportsEngine.ReadmeGeneration\LICENSE</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
     <AnalysisLevel>latest</AnalysisLevel>

@@ -9,6 +9,7 @@ I MohammadReza Gholamizadeh. I`m Dotnet Software Developer That Always Try To Ma
 
 ## 🔗 Links
 [![Source Code](https://img.shields.io/badge/Source_Code-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohammadRezaGholamizadeh/DotnetReportsEngine.ReadmeGeneration)
+[![Sample Code To Get Start](https://img.shields.io/badge/Sample_Code_To_Get_Start-ad1714?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohammadRezaGholamizadeh/DotnetReportsEngine.ReadmeGeneration/blob/main/DotNetReportsEngine.ReadmeGeneration/DotnetReportsEngine.SampleCode/Program.cs)
 [![MohammadReza Gholamizadeh GitHub](https://img.shields.io/badge/MohammadReza_Gholamizadeh_GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohammadRezaGholamizadeh)
 [![Nuget](https://img.shields.io/badge/Nuget-4974a5?style=for-the-badge&logo=nuget&logoColor=white)](https://www.nuget.org/profiles/MohammadrezaGholamizadeh_Phoenix)
 
