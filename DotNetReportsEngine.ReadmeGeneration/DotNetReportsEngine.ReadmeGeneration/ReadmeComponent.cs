@@ -770,9 +770,10 @@ namespace DotNetReportsEngine.ReadmeGeneration
                         }
                         template += $@"| `{parameter.Name}` | `{typeName}` | {description}                      |" + Environment.NewLine;
                     }
+                    template += Environment.NewLine;
                 }
 
-                template += Environment.NewLine + Environment.NewLine;
+                template += Environment.NewLine ;
 
                 generator.AppendText(template);
             }
