@@ -666,7 +666,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
                 {
                     if (type.GetConstructors()[i].GetParameters().Length > 0)
                     {
-                        template += $"* Constructor Number {i + 1} : " + Environment.NewLine;
+                        template += $"* Constructor Number {i + 1} : " + Environment.NewLine + Environment.NewLine;
                         template += $@"| Parameter | Type     | Description                |" + Environment.NewLine +
                             $@"| :-------- | :------- | :------------------------- |" + Environment.NewLine;
                     }
@@ -710,7 +710,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
                         template += $@"| `{parameter.Name}` | `{typeName}` | {description}                    |" + Environment.NewLine;
                     }
                 }
-                template += $"### {type.Name} Methods : " + Environment.NewLine;
+                template += $"### {type.Name} Methods : " + Environment.NewLine + Environment.NewLine;
 
                 foreach (var method in type.GetMethods()
                                            .Where(_ => _.IsPublic
