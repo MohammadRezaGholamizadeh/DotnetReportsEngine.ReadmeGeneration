@@ -30,7 +30,7 @@ namespace DotnetReportsEngine.SampleCode
 ### DotnetReportResourceExtensionMethods Methods : 
 * AddAssemblyOfType(generator)
 | Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
+| -------- | ------- | ------------------------- |
 | `generator` | `ReadmeGenerator` | ** **Required.**                      |
 * AddAssembly(generator, assembly)
 | Parameter | Type     | Description                |
