@@ -346,7 +346,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
           (this ReadmeGenerator generator,
            GitHubLink gitHub_links)
         {
-            var logolink = GitHubLogoLinkGenerator(gitHub_links.LogoType);
+            var logolink = GitHubLogoLinkGenerator(gitHub_links.LogoType, gitHub_links.Title);
             logolink = logolink != "CustomLink" ? logolink : gitHub_links.LogoLink;
             var template =
               $"## 🔗 Links" + Environment.NewLine +
@@ -359,38 +359,39 @@ namespace DotNetReportsEngine.ReadmeGeneration
             return generator;
         }
 
-        private static string GitHubLogoLinkGenerator(LogoLinkType logoLinkType)
+        private static string GitHubLogoLinkGenerator(LogoLinkType logoLinkType, string title)
         {
+            title = title.Replace(" ", "_");
             switch (logoLinkType)
             {
                 case LogoLinkType.Github:
-                    return $"https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-000?style=for-the-badge&logo=github&logoColor=white";
                 case LogoLinkType.LinkedIn:
-                    return $"https://img.shields.io/badge/Linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white";
                 case LogoLinkType.OpenAi:
-                    return $"https://img.shields.io/badge/OpenAi-3fd2c7?style=for-the-badge&logo=openai&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-3fd2c7?style=for-the-badge&logo=openai&logoColor=white";
                 case LogoLinkType.Meta:
-                    return $"https://img.shields.io/badge/Meta-0000ff?style=for-the-badge&logo=meta&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-0000ff?style=for-the-badge&logo=meta&logoColor=white";
                 case LogoLinkType.WhatsApp:
-                    return $"https://img.shields.io/badge/WhatsApp-0A66C2?style=for-the-badge&logo=whatsapp&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-0A66C2?style=for-the-badge&logo=whatsapp&logoColor=white";
                 case LogoLinkType.Telegram:
-                    return $"https://img.shields.io/badge/Telegram-1ac5ff?style=for-the-badge&logo=telegram&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-1ac5ff?style=for-the-badge&logo=telegram&logoColor=white";
                 case LogoLinkType.Viber:
-                    return $"https://img.shields.io/badge/Viber-8a2be2?style=for-the-badge&logo=viber&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-8a2be2?style=for-the-badge&logo=viber&logoColor=white";
                 case LogoLinkType.FaceBook:
-                    return $"https://img.shields.io/badge/FaceBook-14134e?style=for-the-badge&logo=facebook&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-14134e?style=for-the-badge&logo=facebook&logoColor=white";
                 case LogoLinkType.X:
-                    return $"https://img.shields.io/badge/X-000?style=for-the-badge&logo=x&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-000?style=for-the-badge&logo=x&logoColor=white";
                 case LogoLinkType.Nuget:
-                    return $"https://img.shields.io/badge/Nuget-4974a5?style=for-the-badge&logo=nuget&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-4974a5?style=for-the-badge&logo=nuget&logoColor=white";
                 case LogoLinkType.Gmail:
-                    return $"https://img.shields.io/badge/Gmail-ad1714?style=for-the-badge&logo=gmail&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-ad1714?style=for-the-badge&logo=gmail&logoColor=white";
                 case LogoLinkType.Google:
-                    return $"https://img.shields.io/badge/Google-ad1714?style=for-the-badge&logo=google&logoColor=white";
+                    return $"https://img.shields.io/badge/{title}-ad1714?style=for-the-badge&logo=google&logoColor=white";
                 case LogoLinkType.CustomLink:
-                    return $"CutomLink";
+                    return $"CustomLink";
                 default:
-                    return "CutomLink";
+                    return "CustomLink";
             }
         }
 
@@ -401,7 +402,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
             LogoLinkType logoLinkType,
             string customLogoLink)
         {
-            var logolink = GitHubLogoLinkGenerator(logoLinkType);
+            var logolink = GitHubLogoLinkGenerator(logoLinkType, title);
             logolink = logolink != "CustomLink" ? logolink : customLogoLink;
             var template =
               $"## 🔗 Links" + Environment.NewLine +
@@ -439,7 +440,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
 
             foreach (var link in gitHub_links)
             {
-                var logolink = GitHubLogoLinkGenerator(link.LogoType);
+                var logolink = GitHubLogoLinkGenerator(link.LogoType, link.Title);
                 logolink = logolink != "CustomLink" ? logolink : link.LogoLink;
                 template +=
                   $@"[![{link.Title}]({logolink})]({link.Link})" + Environment.NewLine;
@@ -604,6 +605,23 @@ namespace DotNetReportsEngine.ReadmeGeneration
         {
             var template =
                 $@"[![{badge.Title}]({badge.BadgeLink})]({badge.RedirectLink})";
+
+            template += Environment.NewLine;
+
+            generator.AppendText(template);
+
+            return generator;
+        }
+
+        public static ReadmeGenerator GenerateCodeForCustomCode
+          (this ReadmeGenerator generator,
+            string language,
+            string codeBody)
+        {
+            var template =
+                $"```{language}" + Environment.NewLine +
+                $"{codeBody}" + Environment.NewLine +
+                $"```";
 
             template += Environment.NewLine;
 

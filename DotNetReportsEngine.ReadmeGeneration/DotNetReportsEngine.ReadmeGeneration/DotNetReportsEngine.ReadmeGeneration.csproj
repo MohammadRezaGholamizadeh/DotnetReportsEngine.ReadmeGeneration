@@ -1,13 +1,68 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>ReadmeLogo.ico</ApplicationIcon>
+    <DebugType>embedded</DebugType>
+    <SignAssembly>False</SignAssembly>
+    <Company>MohammadReza Gholamizadeh [Phoenix]</Company>
+    <PackageProjectUrl>https://github.com/MohammadRezaGholamizadeh/DotnetReportsEngine.ReadmeGeneration</PackageProjectUrl>
+    <PackageIcon>ReadmeLogo.png</PackageIcon>
+    <Description>This Package Developed For Generating The Read me File Automated.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/MohammadRezaGholamizadeh/DotnetReportsEngine.ReadmeGeneration</RepositoryUrl>
+    <PackageLicenseFile>D:\All Projects\DotnetReportsEngine.ReadmeGeneration\DotNetReportsEngine.ReadmeGeneration\DotNetReportsEngine.ReadmeGeneration\LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LICENSE" />
+    <None Remove="ReadmeLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ReadmeLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadmeLogo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadmeLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </EmbeddedResource>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DotnetReportsEngine.Core" Version="1.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ReadmeComponent.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ReadmeLogo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

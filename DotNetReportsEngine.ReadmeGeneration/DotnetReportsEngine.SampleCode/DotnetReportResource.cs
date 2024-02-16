@@ -1,9 +1,5 @@
 ﻿using DotNetReportsEngine.ReadmeGeneration.Details;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 
 namespace DotnetReportsEngine.SampleCode
 {
@@ -27,7 +23,6 @@ namespace DotnetReportsEngine.SampleCode
                 $@"[![{badge.Title}]({badge.BadgeLink})]({badge.RedirectLink})";
 
                 template += Environment.NewLine;
-
             }
 
             return generator;

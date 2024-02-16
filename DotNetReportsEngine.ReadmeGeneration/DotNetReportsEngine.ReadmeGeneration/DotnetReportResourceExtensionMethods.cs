@@ -6,6 +6,7 @@ using System.Reflection;
 
 namespace DotNetReportsEngine.ReadmeGeneration
 {
+    [RenderInReadmeFile]
     public static class DotnetReportResourceExtensionMethods
     {
         public static ReadmeGenerator AddAssemblyOfType<T>
@@ -611,6 +612,16 @@ namespace DotNetReportsEngine.ReadmeGeneration
         {
             generator.Resource.Badges.AddRange(badges);
             generator.GenerateCodeForBadges(badges);
+            return generator;
+        }
+
+        public static ReadmeGenerator AddCustomCode
+         (this ReadmeGenerator generator,
+            string language,
+            string CodeBody)
+        {
+            generator.Resource.CustomCodes.Add(language, CodeBody);
+            generator.GenerateCodeForCustomCode(language, CodeBody);
             return generator;
         }
 

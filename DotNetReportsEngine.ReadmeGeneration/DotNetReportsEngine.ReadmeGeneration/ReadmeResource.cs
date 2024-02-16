@@ -26,6 +26,7 @@ namespace DotNetReportsEngine.ReadmeGeneration
             CustomBashCommands = new List<CustomBashCommand>();
             CustomTexts = new List<CustomText>();
             Badges = new List<Badge>();
+            CustomCodes = new Dictionary<string, string>();
         }
 
         public List<Assembly> Assemblies { get; internal set; }
@@ -60,5 +61,6 @@ namespace DotNetReportsEngine.ReadmeGeneration
         public List<CustomBashCommand> CustomBashCommands { get; internal set; }
         public List<CustomText> CustomTexts { get; internal set; }
         public List<Badge> Badges { get; internal set; }
+        public Dictionary<string, string> CustomCodes { get; set; }
     }
 }

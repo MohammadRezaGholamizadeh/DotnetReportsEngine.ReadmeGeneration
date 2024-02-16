@@ -1,5 +1,8 @@
-﻿namespace DotNetReportsEngine.ReadmeGeneration
+﻿using DotNetReportsEngine.ReadmeGeneration.Details;
+
+namespace DotNetReportsEngine.ReadmeGeneration
 {
+    [RenderInReadmeFile]
     public class ReadmeGenerator
     {
         public ReadmeGenerator()
